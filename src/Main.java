@@ -7,16 +7,14 @@ public class Main
 
         System.out.print ("Enter your number please: ");
         Scanner sc = new Scanner(System.in);
+        String nam= sc.nextLine();
+        int size=nam.length();
 
-        int num= sc.nextInt();
-        int count=0,result=0;
+            int result=0, count=0;
+        for (int i=size-1; i>=0;i--){
+            result +=(nam.charAt(i)-'0') * (int)Math.pow(8,count);
+            count +=1;}
 
-
-        while(num !=0)
-        {
-            result +=(num%10) * (int)Math.pow(8,count);
-            num/=10; count +=1;
-        }
         System.out.println(result);
     }
     }
